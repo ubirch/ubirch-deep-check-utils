@@ -36,17 +36,18 @@ scmInfo := Some(ScmInfo(
  * RESOLVER
  ********************************************************/
 
+val resolverUbirchUtils = "cloudrepo.io" at "https://ubirch.mycloudrepo.io/repositories/ubirch-utils-mvn"
 
 resolvers ++= Seq(
   Resolver.sonatypeRepo("releases"),
-  Resolver.sonatypeRepo("snapshots"))
+  Resolver.sonatypeRepo("snapshots"),
+  resolverUbirchUtils)
 
 
 /*
  * PUBLISHING
  ********************************************************/
 
-val resolverUbirchUtils = "cloudrepo.io" at "https://ubirch.mycloudrepo.io/repositories/ubirch-utils-mvn"
 
 publishTo := Some(resolverUbirchUtils)
 publishMavenStyle := true
@@ -61,11 +62,10 @@ val json4sV = "3.6.0"
 
 
 // Ubirch dependencies
-val ubirchUtilJson = "com.ubirch.util" %% "json" % "0.5.1"
+val ubirchUtilJson = "com.ubirch.util" %% "ubirch-json-utils" % "0.5.2"
 
 // External dependencies
 val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
-
 val json4sJackson = "org.json4s" %% "json4s-jackson" % json4sV
 val json4sCore = "org.json4s" %% "json4s-core" % json4sV
 val json4sExt = "org.json4s" %% "json4s-ext" % json4sV
