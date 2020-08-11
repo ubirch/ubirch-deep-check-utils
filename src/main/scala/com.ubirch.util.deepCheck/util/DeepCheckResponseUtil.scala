@@ -6,6 +6,7 @@ import com.ubirch.util.deepCheck.model.DeepCheckResponse
   * author: cvandrei
   * since: 2017-07-28
   */
+@deprecated(message = "please use DeepCheckResponseUtil instead", since = "0.4.0")
 object DeepCheckResponseUtil {
 
   /**

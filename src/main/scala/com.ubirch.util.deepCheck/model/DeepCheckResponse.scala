@@ -9,6 +9,7 @@ import org.json4s.native.Serialization.write
   * author: cvandrei
   * since: 2017-06-06
   */
+@deprecated(message = "please use ServiceCheckResponse instead", since = "0.4.0")
 case class DeepCheckResponse(status: Boolean = true,
                              messages: Seq[String] = Seq.empty
                           ) {
