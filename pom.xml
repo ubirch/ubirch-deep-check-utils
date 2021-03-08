@@ -21,7 +21,7 @@
 
 
     <groupId>com.ubirch.util</groupId>
-    <artifactId>ubirch-deep-check-utils_${scala.major.version}</artifactId>
+    <artifactId>ubirch-deep-check-utils_${scala.compat.version}</artifactId>
     <version>0.4.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -71,9 +71,8 @@
         <timestamp>${maven.build.timestamp}</timestamp>
         <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
 
-        <scala.major.version>2.11</scala.major.version>
-        <scala.version>2.11.12</scala.version>
-        <scala.compat.version>2.11</scala.compat.version>
+        <scala.version>2.12.8</scala.version>
+        <scala.compat.version>2.12</scala.compat.version>
         <scalatest.version>3.0.5</scalatest.version>
 
         <ubirch-json.version>0.5.3-SNAPSHOT</ubirch-json.version>
@@ -133,7 +132,6 @@
         </dependency>
 
         <!-- Scala -->
-
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
