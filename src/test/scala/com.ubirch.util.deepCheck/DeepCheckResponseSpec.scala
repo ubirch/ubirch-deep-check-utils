@@ -1,18 +1,19 @@
 package com.ubirch.util.deepCheck
 
 import com.ubirch.util.deepCheck.model.DeepCheckResponse
-import org.scalatest.{FeatureSpec, Matchers}
+import org.scalatest.featurespec.AnyFeatureSpec
+import org.scalatest.matchers.should.Matchers
 
 /**
   * author: cvandrei
   * since: 2017-06-06
   */
-class DeepCheckResponseSpec extends FeatureSpec
+class DeepCheckResponseSpec extends AnyFeatureSpec
   with Matchers {
 
-  feature("toJsonString()") {
+  Feature("toJsonString()") {
 
-    scenario("default object") {
+    Scenario("default object") {
 
       // prepare
       val deepCheckResult = DeepCheckResponse()
@@ -26,7 +27,7 @@ class DeepCheckResponseSpec extends FeatureSpec
 
     }
 
-    scenario("NOK; with two messages") {
+    Scenario("NOK; with two messages") {
 
       // prepare
       val deepCheckResult = DeepCheckResponse(status = false, messages = Seq("foo", "bar"))
